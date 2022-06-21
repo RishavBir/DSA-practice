@@ -7,7 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
- const arr = ["pizza", "biriyani", "momo", "omlete"]
+const arr = ["pizza", "biriyani", "momo", "omlete"]
+//const arr = [2,3,4,5,6]
 
 function searching(arr,value){         // here we find the indexOf the particular value we provide, 
                                        //  without using indexOf method.
@@ -18,7 +19,9 @@ function searching(arr,value){         // here we find the indexOf the particula
   }
     return -1
 }
-console.log(searching(arr,"momo"))    // output will be 2 for momo
+
+ //console.log(searching(arr,"momo"))   // output will be 2 for momo
+ //console.log(searching(arr,5))
 
 //************************************************************************************************* */
 

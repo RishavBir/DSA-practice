@@ -17,21 +17,24 @@ PSEUDOCODE:
 */
 
 function binarySearch(sortedArr,value){
-    let leftPointer = 0                         // leftPointer starts from initials thatswhy its 0
-    let rightPointer = sortedArr.length-1
+    let start = 0                         // leftPointer starts from initials that's why it's 0
+    let end = sortedArr.length-1
 
-    while(leftPointer <= rightPointer){
-        const mid = Math.floor((leftPointer + rightPointer)/2);
-        const midValue = sortedArr[mid]
+    while(start <= end){
+        const middle = Math.floor((start + end)/2);
+        const midValue = sortedArr[middle]
 
         if(midValue === value){
-            return mid
+            return middle
+
         }else if(midValue < value){
-            leftPointer = mid + 1
+            start = middle + 1
         }else{
-            rightPointer = mid - 1
+            end = middle - 1
         }
     }
     return -1
 }
-console.log(binarySearch([2,4,5,6,7,8],6))
+//console.log(binarySearch([2,3,9,4,5,6,7],6))
+//console.log(binarySearch([2,3,4,9,5,6,7],6)) 
+console.log(binarySearch([2,3,4,5,6,7],6))
