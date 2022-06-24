@@ -1,33 +1,33 @@
 
 // is "heart" and "earth" are anagrams or not ?
 
-const str1 = "heart"
-const str2 = "earth"
+// const str1 = "heart"
+// const str2 = "earth"
 
-function isAnagram(str1,str2){
-    str1= str1.toLowerCase()
-    str2= str2.toLowerCase()
-    if(str1.length !== str2.length){
-        return false
-    }
-    const str1CharCount = {}
-    for(let i=0; i<str1.length; i++){
-        const aChar = str1[i]
-        str1CharCount[aChar] = str1CharCount[aChar] +1 || 1
-        console.log(str1CharCount[aChar] )
-    }
+// function isAnagram(str1,str2){
+//     str1= str1.toLowerCase()
+//     str2= str2.toLowerCase()
+//     if(str1.length !== str2.length){
+//         return false
+//     }
+//     const str1CharCount = {}
+//     for(let i=0; i<str1.length; i++){
+//         const aChar = str1[i]
+//         str1CharCount[aChar] = str1CharCount[aChar] +1 || 1
+//         console.log(str1CharCount[aChar] )
+//     }
     
-    for(let i=0; i<str2.length; i++){
-        const bChar = str2[i]
-        if(!str1CharCount[bChar]){
-            return false
-        }else{
-            str1CharCount[bChar]--
-        }
-    }
-    return true
-}
-console.log(isAnagram(str1,str2))
+//     for(let i=0; i<str2.length; i++){
+//         const bChar = str2[i]
+//         if(!str1CharCount[bChar]){
+//             return false
+//         }else{
+//             str1CharCount[bChar]--
+//         }
+//     }
+//     return true
+// }
+// console.log(isAnagram(str1,str2))
 
 
 //********************************************************************************************* */
@@ -50,3 +50,32 @@ function isAnagram (strA,strB){
 
 console.log(isAnagram(strA,strB))
 */
+
+//**********************************************************************************************/
+
+ function isAnagram (s, t) {
+
+    if(s.length !== t.length){
+        return false;
+    }
+    let frequencyCount1 = {}
+    let frequencyCount2 = {}
+    
+    for(let value of s){
+        frequencyCount1[value] = (frequencyCount1[value] || 0) + 1
+     }
+    for(let value of t){
+        frequencyCount2[value] = (frequencyCount2[value] || 0) + 1
+     }
+    for(let key in frequencyCount1){
+      
+         if(frequencyCount1[key] !== frequencyCount2[key]){
+            return false
+        }
+       
+    }
+     return true
+    
+}
+
+console.log(isAnagram("heart","earth"))
