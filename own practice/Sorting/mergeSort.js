@@ -1,6 +1,8 @@
 /*
 pseudocode:
 
+NOTE: It is work only for sorted array
+
  ==> Creating an empty array, tale a look at the smallest values in each input array.
  ==> While there are still values we haven't looked at.
 
@@ -15,43 +17,46 @@ pseudocode:
         -- Once we exhaust one array, push all remaining values from the other array.
 */
 
+/*
 
-// arr1 = [1, 10, 15]
-// arr2 = [2, 6, 30, 74, 32]
+arr1 = [1, 10, 15,30,60]
+arr2 = [2, 6, 30]
 
-// function mergeSort(arr1, arr2) {
-//     var resultArr = []
-//     var i = 0;
-//     var j = 0;
+function mergeSort(arr1, arr2) {
+    var resultArr = []
+    var i = 0;
+    var j = 0;
 
-//     while (i < arr1.length && j < arr2.length) {
-//         if (arr1[i] < arr2[j]) {
-//             resultArr.push(arr1[i])
-//             i++
-//         } else {
-//             resultArr.push(arr2[j])
-//             j++
-//         }
-//     }
-//     // here we have to use two while loops to check the last consition that is, pushing
-//     // all the remaining elements into the result array.
+    while (i < arr1.length && j < arr2.length) {
+        if (arr1[i] < arr2[j]) {
+            resultArr.push(arr1[i])
+            i++
+        } else {
+            resultArr.push(arr2[j])
+            j++
+        }
+    }
+    // here we have to use two while loops to check the last condition that is, pushing
+    // all the remaining elements into the result array.
     
-//     while (i < arr1.length) {
-//         resultArrArr.push(arr1[i])
-//         i++
-//     }
-//     while (j < arr2.length) {
-//         resultArr.push(arr2[j])
-//         j++
-//     }
-//     return resultArr;
-// }
+    while (i < arr1.length) {
+        resultArr.push(arr1[i])
+        i++
+    }
+    while (j < arr2.length) {
+        resultArr.push(arr2[j])
+        j++
+    }
+    return resultArr;
+}
 
-// console.log(mergeSort(arr1, arr2))
+console.log(mergeSort(arr1, arr2))
+*/
 
-//*************************************************************************************************** */
 
-/* PROBLEM :
+//*************************************************************************************************** 
+
+/* PROBLEM 2 :
 
 ==> You are given two strings word1 and word2. Merge the strings by adding letters in alternating order.
 Ex
@@ -60,7 +65,7 @@ Ex
       output= "apbqcr"
 */
 
-
+/*
 function mergeSort (word1,word2){
 
     let result = []
@@ -75,3 +80,63 @@ function mergeSort (word1,word2){
 }
 
 console.log(mergeSort("abc","pqr"))
+*/
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/* 
+PROBLEM 3: Given an array of integers nums, sort the array in ascending order.
+
+ 
+Example 1:
+
+            Input: nums = [5,2,3,1]
+            Output: [1,2,3,5]
+
+Example 2:
+
+            Input: nums = [5,1,1,2,0,0]
+            Output: [0,0,1,1,2,5]
+*/
+
+
+function merge (arr1,arr2) {
+
+    let result =[], i=0, j=0
+
+    while(i<arr1.length && j<arr2.length){
+        if(arr1[i]< arr2[j]){
+            result.push(arr1[i])
+            i++
+        }else{
+            result.push(arr2[j])
+            j++
+        }
+    }
+
+    while(i < arr1.length){
+        result.push(arr1[i])
+        i++
+    }
+    while(j<arr2.length){
+        result.push(arr2[j])
+        j++
+    }
+    return result
+}
+
+function sortedArr (nums){
+
+    if(nums.length <= 1){
+        return nums
+    }
+    let middle = Math.floor(nums.length/2)
+        let left = sortedArr(nums.slice(0,middle))
+        let right = sortedArr(nums.slice(middle))
+        return merge(left ,right)
+}
+
+console.log(sortedArr([5,2,3,1,9,6]))   
+
+
+ 

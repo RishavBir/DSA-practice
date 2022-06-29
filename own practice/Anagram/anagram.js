@@ -53,18 +53,18 @@ console.log(isAnagram(strA,strB))
 
 //**********************************************************************************************/
 
- function isAnagram (s, t) {
+ function isAnagram (str1, str2) {
 
-    if(s.length !== t.length){
+    if(str1.length !== str2.length){
         return false;
     }
     let frequencyCount1 = {}
     let frequencyCount2 = {}
     
-    for(let value of s){
+    for(let value of str1){
         frequencyCount1[value] = (frequencyCount1[value] || 0) + 1
      }
-    for(let value of t){
+    for(let value of str2){
         frequencyCount2[value] = (frequencyCount2[value] || 0) + 1
      }
     for(let key in frequencyCount1){
@@ -72,10 +72,9 @@ console.log(isAnagram(strA,strB))
          if(frequencyCount1[key] !== frequencyCount2[key]){
             return false
         }
-       
-    }
+ }
+
      return true
-    
 }
 
 console.log(isAnagram("heart","earth"))

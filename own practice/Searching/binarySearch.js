@@ -21,8 +21,8 @@ function binarySearch(sortedArr,value){
     let end = sortedArr.length-1
 
     while(start <= end){
-        const middle = Math.floor((start + end)/2);
-        const midValue = sortedArr[middle]
+        let middle = Math.floor((start + end)/2);
+        let midValue = sortedArr[middle]
 
         if(midValue === value){
             return middle

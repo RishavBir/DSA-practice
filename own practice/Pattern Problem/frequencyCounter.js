@@ -4,7 +4,7 @@
 ===== This can avoid the need of nested loops or O(N^2) operations with arrays/ strings
 */
 
-                                            // BY using LOOPS
+                                            // BY using NESTED LOOPS
 /*
 function same (arr1,arr2){
     if(arr1.length !== arr2.length){
@@ -29,7 +29,7 @@ console.log(same([1,2,2,3], [1,4,9,4]))
 
 //************************************************************************************************* */
 
-// METHOD NUMBER 2
+                                            // METHOD NUMBER 2
 
 function same (arr1,arr2){
     if(arr1.length !== arr2.length){
@@ -60,3 +60,40 @@ function same (arr1,arr2){
 
 console.log(same([1,2,5,4],[1,25,4,16]))
 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+Given an array of integers arr, return true if the number of occurrences of each value in the array is unique, 
+or false otherwise.
+
+ Example 1:
+
+Input: arr = [1,2,2,1,1,3]
+Output: true
+*/
+
+/*
+function uniqueOccurance (arr){
+
+    let obj = {}
+     for(let i of arr){
+         if(obj[i]){
+             obj[i]++
+         }else{
+             obj[i] = 1
+         }
+     }
+    
+    let arr2 = Object.values(obj)
+    let set = new Set(arr2)
+    
+    if(set.size == arr2.length){
+        return true
+    }else{
+        return false
+    }
+}
+
+console.log(uniqueOccurance([1,2,2,1,1,3]))
+*/

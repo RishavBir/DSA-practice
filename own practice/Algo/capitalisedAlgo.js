@@ -13,16 +13,16 @@ ex -- "I am a robot" === "I Am A Robot"
                 ii} you can use the lowerCase and upperCase to apply according to the question.
             c} then the array back to the string. */
 
- const str1 = "I love adventures"
+ const str1 = "welcome to the jurassic world"
 
-function capitalised (str){
+function capitalised (str1){
     const arr1= str1.split(" ")         // converting the string into array
-    const arr2 = []
+    const emptyArr = []
 
     for (let i=0; i<arr1.length; i++){
-        const word  = arr1[i]               // taling the variable "word" and stored the elements there
-        arr2.push(word[0].toUpperCase() + word.slice(1).toLowerCase())     // here push the result in empty array
+        const word  = arr1[i]               // taking the variable "word" and stored the elements here
+        emptyArr.push(word[0].toUpperCase() + word.slice(1).toLowerCase())     // here push the result in empty array
     }
-return arr2.join(" ")
+return emptyArr.join(" ")
 }
 console.log(capitalised(str1)) 
