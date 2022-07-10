@@ -22,3 +22,4 @@ class stack {
 
 /* NOTE >>>>>>>>>   
                  here the time complexsity is O(1)
+ */

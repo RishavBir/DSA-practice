@@ -1,8 +1,8 @@
 
 /*
-=== Binary search works on sorted array.
+=== Binary search works on >>>>>> SORTED ARRAY. <<<<<<
 === much faster than the linear search due to presorted.
-=== Binary search can achieve 0(logN) time complexity by eliminating half of remaining
+=== Binary search can achieve >>>>>>>> 0(logN) TIME COMPLEXITY <<<<<<<< by eliminating half of remaining
     things to search for with each search.
 
 PSEUDOCODE:
@@ -38,3 +38,4 @@ function binarySearch(sortedArr,value){
 //console.log(binarySearch([2,3,9,4,5,6,7],6))
 //console.log(binarySearch([2,3,4,9,5,6,7],6)) 
 console.log(binarySearch([2,3,4,5,6,7],6))
+

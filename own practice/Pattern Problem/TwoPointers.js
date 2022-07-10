@@ -132,3 +132,7 @@ function uniqueVal (arr){
 }
 
 console.log(uniqueVal([1,2,2,3,3,3,4,5,6,7,7]))   // total 7 unique numbers
+
+
+
+

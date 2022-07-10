@@ -5,14 +5,13 @@
 pallindrome or not ("abba")
 */
  
-/*                                    
+                                  
 let str = "madam"
     
 let str2 = str.toLowerCase().split("").reverse().join("")  
 
     function isPalindrome (str){
            
-        
         if(str2 === str){                                                    
             return true                                                          
         }else{
@@ -20,13 +19,13 @@ let str2 = str.toLowerCase().split("").reverse().join("")
         }
     }
     console.log(isPalindrome(str))
- */
+ 
 
 
 /****************************************************************************************************** */
 
 // THORUGH RECCURSION METHOD
-
+/*
 function isPalindrome (str){
     let str2 = str.toLowerCase()
 
@@ -41,3 +40,4 @@ function isPalindrome (str){
     }
 }
 console.log(isPalindrome("Madam"))
+*/
