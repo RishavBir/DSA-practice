@@ -55,7 +55,7 @@ class LinkedList {
 here we dont need to write head inside reverse function.
 */ 
 
-/*
+
     reverse() {                             
         var prev = null;
         var current = this.head;
@@ -69,7 +69,7 @@ here we dont need to write head inside reverse function.
         this.head = prev;
         return prev;
     }
-*/
+
 ////////////////////////////////////////////////////////////////
 
 /*   removeFirstNode() {
@@ -121,7 +121,7 @@ removeLastNode() {
 
 
 let list = new LinkedList()
-const array = [2, 3, 4, 5]
+const array = [2, 3, 4, 5, 6, 7]
 for (let i = 0; i < array.length; i++) {
     list.insertAtLast(array[i])
 }
@@ -130,11 +130,11 @@ list.printList();
 
 // >>>>>>>>>>>>>>>>>>>>>>>>
 //                                   >> REVERSING OF A LINKEDLIST
-/*
+
 list.reverse();
 console.log("After Reversing a Singly Linked List")
 list.printList();
-*/
+
 
 //*********************************************************************************************************** */
 

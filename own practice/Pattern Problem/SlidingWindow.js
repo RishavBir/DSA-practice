@@ -44,11 +44,9 @@ function maxSumSubArray(arr, pair) {
 console.log(maxSumSubArray([1, 3, 5, 2, 4, 9, 8, 7], 3))
 
 
-/*
-
 //                        USING SLIDIND WINDOW CONCEPT ..... TIMECOMPLEXITY IS >>>> O(N)
 
-
+/*
 function maxSubArr (arr,size){
 
   let maxSum = 0
