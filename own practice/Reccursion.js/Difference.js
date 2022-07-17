@@ -52,8 +52,9 @@ console.log(collectOddValues([1,2,3,6,9,11]))
 
 /*********************************************************************************************************** */
 
-                                // WRITE A CODE THROUGH PURE RECCURSIVE METHOD
+//                           WRITE A CODE THROUGH PURE RECCURSIVE METHOD
 
+/*                           
 function collectOddValues (arr) {
     let newArr = []
 
@@ -68,4 +69,20 @@ function collectOddValues (arr) {
     return newArr
 }
 
-console.log(collectOddValues([1,2,3,4,5,6,7,8,9]))
+console.log(collectOddValues([1,2,3,4,5,6,7,8,9]))    // [1,3,5,7,9]
+*/
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// >>>>> METHOD ----- 2
+
+function collectOdd (array){
+    let result = []
+    for(let i=0;i<array.length; i++){
+        if(array[i] % 2 !== 0){
+            result.push(array[i])         // if i do .....  >>>> result.push(i) <<< it will give me the index 
+        }                                 // in which the odd values are present.
+    }
+    return result
+}
+console.log(collectOdd([1,2,3,4,5,6,7,8,9]))    // [1,3,5,7,9]

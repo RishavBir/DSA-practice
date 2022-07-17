@@ -48,33 +48,33 @@ function isAnagram (strA,strB){
     }
 }
 
-console.log(isAnagram(strA,strB))
-*/
+// console.log(isAnagram(strA,strB))
+// */
 
-//**********************************************************************************************/
+// //**********************************************************************************************/
 
- function isAnagram (str1, str2) {
+//  function isAnagram (str1, str2) {
 
-    if(str1.length !== str2.length){
-        return false;
-    }
-    let frequencyCount1 = {}
-    let frequencyCount2 = {}
+//     if(str1.length !== str2.length){
+//         return false;
+//     }
+//     let frequencyCount1 = {}
+//     let frequencyCount2 = {}
     
-    for(let value of str1){
-        frequencyCount1[value] = (frequencyCount1[value] || 0) + 1
-     }
-    for(let value of str2){
-        frequencyCount2[value] = (frequencyCount2[value] || 0) + 1
-     }
-    for(let key in frequencyCount1){
+//     for(let value of str1){
+//         frequencyCount1[value] = (frequencyCount1[value] || 0) + 1
+//      }
+//     for(let value of str2){
+//         frequencyCount2[value] = (frequencyCount2[value] || 0) + 1
+//      }
+//     for(let key in frequencyCount1){
       
-         if(frequencyCount1[key] !== frequencyCount2[key]){
-            return false
-        }
- }
+//          if(frequencyCount1[key] !== frequencyCount2[key]){
+//             return false
+//         }
+//  }
 
-     return true
-}
+//      return true
+// }
 
-console.log(isAnagram("heart","earth"))
+// console.log(isAnagram("heart","earth"))

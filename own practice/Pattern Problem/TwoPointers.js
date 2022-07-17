@@ -70,8 +70,9 @@ function moveZeroes (nums) {
     return nums
 }
 
-console.log(moveZeroes([0,2,3,0,5,6,12]))
+console.log(moveZeroes([3,0,4,6,7,0,1,5]))    // [3,4,6,7,1,5,0,0]
 */
+
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -87,7 +88,7 @@ Output: [0,1,9,16,100]
 Explanation: After squaring, the array becomes [16,1,0,9,100].
 After sorting, it becomes [0,1,9,16,100].
 */
-/*
+
 function squares (nums) {
 
     let squaredArr = Array(nums.length)
@@ -97,7 +98,6 @@ function squares (nums) {
     for(let i = right ; i >=0 ; i--){
         let squaredLeft = nums[left] ** 2
         let squaredRight = nums[right] ** 2
-
         if(squaredLeft > squaredRight) {
             squaredArr[i] = squaredLeft
             left++
@@ -110,7 +110,7 @@ function squares (nums) {
 }
 
 console.log(squares([-4,-1,0,3,10]))
-*/
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -120,6 +120,7 @@ console.log(squares([-4,-1,0,3,10]))
  ex ==== [1,2,2,3,3,3,4,5,6,7,7]
 */
 
+
 function uniqueVal (arr){
     var i = 0
     for(let j=1; j<arr.length; j++){
@@ -128,11 +129,10 @@ function uniqueVal (arr){
             arr[i] = arr[j]
         }
     }
-    return i + 1
+    return i+1
 }
 
 console.log(uniqueVal([1,2,2,3,3,3,4,5,6,7,7]))   // total 7 unique numbers
-
 
 
 

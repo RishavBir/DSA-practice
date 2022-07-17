@@ -37,5 +37,5 @@ function binarySearch(sortedArr,value){
 }
 //console.log(binarySearch([2,3,9,4,5,6,7],6))
 //console.log(binarySearch([2,3,4,9,5,6,7],6)) 
-console.log(binarySearch([2,3,4,5,6,7],6))
+console.log(binarySearch([2,3,4,5,6,7],6))     // 4 >>>> since 6 is placed in index position 4
 

@@ -37,22 +37,22 @@ function same (arr1,arr2){
         return false
     }
 
-    let frequencyCount1 = {}
-    let frequencyCount2 = {}
+    let obj1 = {}
+    let obj2 = {}
 
-    for(let value of arr1){
-        frequencyCount1[value] = (frequencyCount1[value] || 0) + 1
+    for(let i in arr1){
+        obj1[arr1[i]] = (obj1[arr1[i]] || 0) + 1
     }
-    for(let value of arr2){
-        frequencyCount2[value] = (frequencyCount2[value] || 0) + 1
+    for(let i in arr2){
+        obj2[arr2[i]] = (obj2[arr2[i]] || 0) + 1
     }
 
-    for(let key in frequencyCount1){
-        if( ! (key ** 2 in frequencyCount2)){
+    for(let i in obj1){
+        if( ! (i ** 2 in obj2)){
             return false
         }
 
-        if(frequencyCount2[key ** 2] !== frequencyCount1[key]){
+        if(obj2[i ** 2] !== obj1[i]){
         return false
         }
     }
@@ -75,26 +75,75 @@ Input: arr = [1,2,2,1,1,3]
 Output: true
 */
 
-
+/*
 function uniqueOccurance (arr){
-
+  //  let count = 0
     let obj = {}
-     for(let i of arr){
-         if(obj[i]){
-             obj[i]++
-         }else{
-             obj[i] = 1
-         }
-     }
-    
-    let arr2 = Object.values(obj)
-    let set = new Set(arr2)
-    
-    if(set.size == arr2.length){
-        return true
-    }else{
-        return false
+
+    for(let i in arr){
+        obj[arr[i]] = ( obj[arr[i]] || 0 ) + 1
     }
+    for(let i in obj){
+        if(obj[i] == 1){
+            return true
+           // count++
+        }
+    }
+    // return count
+    return false
 }
 
-console.log(uniqueOccurance([1,2,2,1,1,3]))
+console.log(uniqueOccurance([1,2,2,1,1,8,5]))
+*/
+
+
+//********************************************************************************************************* */
+
+// Check whether they are anagram or not using FREQUENCY METHOD / OBJECT METHOD
+
+/*
+function isAnagram (str1,str2){
+    let obj1 = {}
+    let obj2 = {}
+
+  if(str1.length !== str2.length){
+    return false
+  }
+  for(let i in str1){
+    obj1[str1[i]] = (obj1[str1[i]] || 0 ) + 1
+  }
+  for(let i in str2){
+    obj2[str2[i]] = (obj2[str2[i]] || 0 ) + 1
+  }
+
+  for(let i in obj1){
+    if(obj1[i] !== obj2[i]){
+        return "They are not Anagram"
+    }
+  }
+  return "They are Anagram"
+}
+console.log(isAnagram("heart","earth"))
+*/
+
+//********************************************************************************************************** */
+
+// Find the unique elements from the array.
+
+function uniqueElement (arr) {
+    let result = [], obj = {}
+
+    for(let i in arr) {
+        obj[arr[i]] = (obj[arr[i]] || 0) + 1
+    }
+    for(let i in obj) {
+        if (obj[i] == 1) {
+            result.push(i)
+        }
+    }
+    return result
+}
+console.log(uniqueElement([2,2,4,6,6,7,9,3,9,9]))   // [3,4,7]
+
+
+

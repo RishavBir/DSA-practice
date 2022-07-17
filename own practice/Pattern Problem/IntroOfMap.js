@@ -25,4 +25,4 @@ function maxChar (nums){
     return char
 }
 
-console.log(maxChar([1,2,4,4,4,5,7,7,8]))
+console.log(maxChar([1,2,4,4,4,5,7,7,8]))   // 4
