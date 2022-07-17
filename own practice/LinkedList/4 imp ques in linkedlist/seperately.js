@@ -10,7 +10,7 @@
 //                          >>>>  1} REVERSE OF A LINKEDLIST <<<<
 
 
-reverse(head) {
+function reverse(head) {
         var prev = null;
         var current = head;
         var next = null;
@@ -30,7 +30,7 @@ reverse(head) {
 //                          >>>> 2} REMOVE THE FIRST NODE FROM THE LIST
 
 /*
-removeFirstNode(head) {
+function removeFirstNode(head) {
 
         if (head == null)
             return null;
@@ -45,7 +45,7 @@ removeFirstNode(head) {
 //                        >>>> 3} REMOVE THE LAST NODE FROM THE LIST
 
 /*
-removeLastNode(head) {
+function removeLastNode(head) {
     if (head == null)
         return null;
 
