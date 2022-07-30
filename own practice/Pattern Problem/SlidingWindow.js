@@ -24,8 +24,9 @@ Find the Maximum sum of consecutive subarray of window size k = 3.
 // let arr....[1,3,5,2,4,9,8,7].....
 // find the maxSum of consecutive pair 3 .....
 
+/*
 function maxSumSubArray(arr, pair) {
-  if (pair > arr) {                             // suppose pair is 4 but array size is [2,3,5] ie, 3
+  if (arr < pair) {                             // suppose pair is 4 but array size is [2,3,5] ie, 3
     return null
   }
   let maxSum = -Infinity                   // summation of negatives num is negative. so we cant take maxSum = zero
@@ -42,11 +43,12 @@ function maxSumSubArray(arr, pair) {
 }
 
 console.log(maxSumSubArray([1, 3, 5, 2, 4, 9, 8, 7], 3))
+*/
 
 
 //                        USING SLIDIND WINDOW CONCEPT ..... TIMECOMPLEXITY IS >>>> O(N)
 
-/*
+
 function maxSubArr (arr,size){
 
   let maxSum = 0
@@ -62,13 +64,13 @@ function maxSubArr (arr,size){
 
   for(let i = size ; i< arr.length; i++){
     tempSum = tempSum - arr[ i - size] + arr[i]
-    maxSum = Math.max(maxSum,tempSum)
+    maxSum = Math.max(tempSum,maxSum)
   }
   return maxSum
 }
 
 console.log(maxSubArr([1,3,5,2,4,9,8,7],3))
-*/
+
 
 
 //************************************************************************************************************

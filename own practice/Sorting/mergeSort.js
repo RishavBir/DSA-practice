@@ -1,7 +1,7 @@
 /*
 pseudocode:
 
-NOTE: It is work only for SORTED ARRAY
+NOTE: It is work only for SORTED ARRAY....... TIMW COMPLEXITY OF MERGE SORT IS >>>>  O(n*Log n) <<<<<<
 
  ==> Creating an empty array, take a look at the smallest values in each input array.
  ==> While there are still values we haven't looked at.
@@ -18,7 +18,7 @@ NOTE: It is work only for SORTED ARRAY
 */
 
 
-
+/*
 arr1 = [1, 10, 15,30,60]
 arr2 = [2, 6, 30]
 
@@ -51,7 +51,7 @@ function mergeSort(arr1, arr2) {
 }
 
 console.log(mergeSort(arr1, arr2))
-
+*/
 
 
 //*************************************************************************************************** 
@@ -99,7 +99,7 @@ Example 2:
             Output: [0,0,1,1,2,5]
 */
 
-/*
+
 function merge (arr1,arr2) {
 
     let result =[], i=0, j=0
@@ -137,6 +137,6 @@ function sortedArr (nums){
 }
 
 console.log(sortedArr([5,2,3,1,9,6]))   
-*/
+
 
  

@@ -13,7 +13,7 @@ Be sure to notice how each steps has some number of empty spaces to the right.
                 "##  "
                 "### "
 */
-
+/*
 function steps (n){
     for (let i=1; i<=n; i++){
         let step= " "
@@ -28,3 +28,5 @@ function steps (n){
     }
 }
 console.log(steps)
+*/
+

@@ -76,8 +76,7 @@ here we dont need to write head inside reverse function.
 
         if (this.head == null)
             return null;
-        // Move the head pointer to the next node
-      let  temp = this.head;
+       let  temp = this.head;         // Move the head pointer to the next node
         this.head = this.head.next;
         return this.head;
     }

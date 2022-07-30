@@ -2,17 +2,16 @@
 
                                     //WHITHOUT USING reverse()
 
-/*
-const str1= "hello world"
-function reverse (str){
+
+function reverseStr (str){
     let res = "";
     for(let i=0;i<str.length; i++){
         res =  str[i] + res
     }
     return res
 }
-console.log(reverse(str1))
-*/
+console.log(reverseStr("hello world"))    // dlrow olleh
+
 
 //************************************************************************************************** */
 
@@ -29,7 +28,7 @@ console.log(reverse(str1))
     >>>> olleh
 */
 
-
+/*
 function reverseStr (str) {
 
     if(str.length === 1){            // base case
@@ -40,6 +39,7 @@ function reverseStr (str) {
 }
 
 console.log(reverseStr("help"))
+*/
 
 
 

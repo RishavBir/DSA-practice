@@ -88,7 +88,7 @@ Output: [0,1,9,16,100]
 Explanation: After squaring, the array becomes [16,1,0,9,100].
 After sorting, it becomes [0,1,9,16,100].
 */
-
+/*
 function squares (nums) {
 
     let squaredArr = Array(nums.length)
@@ -98,7 +98,7 @@ function squares (nums) {
     for(let i = right ; i >=0 ; i--){
         let squaredLeft = nums[left] ** 2
         let squaredRight = nums[right] ** 2
-        if(squaredLeft > squaredRight) {
+        if(squaredLeft > squaredRight) { 
             squaredArr[i] = squaredLeft
             left++
         }else{
@@ -110,7 +110,7 @@ function squares (nums) {
 }
 
 console.log(squares([-4,-1,0,3,10]))
-
+*/
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 

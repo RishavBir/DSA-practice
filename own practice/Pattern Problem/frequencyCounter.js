@@ -31,14 +31,15 @@ console.log(same([1,2,2,3], [1,4,9,4]))
 
                                             // METHOD NUMBER 2
 
- /*
+ 
 function same (arr1,arr2){
+    
+    let obj1 = {}
+    let obj2 = {}
+
     if(arr1.length !== arr2.length){
         return false
     }
-
-    let obj1 = {}
-    let obj2 = {}
 
     for(let i in arr1){
         obj1[arr1[i]] = (obj1[arr1[i]] || 0) + 1
@@ -48,10 +49,7 @@ function same (arr1,arr2){
     }
 
     for(let i in obj1){
-        if( ! (i ** 2 in obj2)){
-            return false
-        }
-
+        
         if(obj2[i ** 2] !== obj1[i]){
         return false
         }
@@ -60,7 +58,7 @@ function same (arr1,arr2){
 }
 
 console.log(same([1,2,5,4],[1,25,4,16]))
-*/
+
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -126,24 +124,49 @@ function isAnagram (str1,str2){
 console.log(isAnagram("heart","earth"))
 */
 
+
 //********************************************************************************************************** */
 
 // Find the unique elements from the array.
 
+/*
 function uniqueElement (arr) {
-    let result = [], obj = {}
+    let result = []
+    let obj = {}
 
     for(let i in arr) {
         obj[arr[i]] = (obj[arr[i]] || 0) + 1
     }
     for(let i in obj) {
-        if (obj[i] == 1) {
+        if (obj[i] === 1) {
             result.push(i)
         }
     }
     return result
 }
 console.log(uniqueElement([2,2,4,6,6,7,9,3,9,9]))   // [3,4,7]
+*/
 
+//*********************************************************************************************************** */
+
+// Count the unique value from the array
+
+/*
+function uniqueElement (arr) {
+    let count =0
+    let obj = {}
+
+    for(let i in arr) {
+        obj[arr[i]] = (obj[arr[i]] || 0) + 1
+    }
+    for(let i in obj) {
+        if (obj[i] == 1) {
+            count++
+        }
+    }
+    return count
+}
+console.log(uniqueElement([2,2,4,6,6,7,9,3,9,9]))   // 3 ... ie. 3,4,7
+*/
 
 

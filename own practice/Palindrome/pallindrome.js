@@ -5,7 +5,7 @@
 pallindrome or not ("abba")
 */
  
-                                  
+/*                                  
 let str = "madam"
     
 let str2 = str.toLowerCase().split("").reverse().join("")  
@@ -19,6 +19,7 @@ let str2 = str.toLowerCase().split("").reverse().join("")
         }
     }
     console.log(isPalindrome(str))
+*/
  
 
 
@@ -41,3 +42,20 @@ function isPalindrome (str){
 }
 console.log(isPalindrome("Madam"))
 */
+
+//********************************************************************************************************** */
+
+function isPalindrome(str) {
+
+    let len = str.length;
+    let mid = Math.floor(len/2);
+
+    for ( let i = 0; i < mid; i++ ) {
+        if (str[i] !== str[len - 1 - i]) {
+            return false;
+        }
+    }
+
+    return true;
+}
+console.log(isPalindrome("madam"))

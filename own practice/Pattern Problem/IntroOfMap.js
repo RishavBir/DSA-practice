@@ -7,7 +7,9 @@ NOTE >>>>>>> 1} for(i of arr) ====== Since we are using "of"...we get only value
 // Find the element from the array which have occured higest time
 
 function maxChar (nums){
-    let map = new Map(), max = 0 ,  char;
+    let map = new Map()
+    let max = 0 
+    let char;
 
     for(let i of nums){
         if(map.has(i)){

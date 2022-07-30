@@ -53,28 +53,29 @@ function isAnagram (strA,strB){
 
 // //**********************************************************************************************/
 
-//  function isAnagram (str1, str2) {
+ function isAnagram (str1, str2) {
 
-//     if(str1.length !== str2.length){
-//         return false;
-//     }
-//     let frequencyCount1 = {}
-//     let frequencyCount2 = {}
-    
-//     for(let value of str1){
-//         frequencyCount1[value] = (frequencyCount1[value] || 0) + 1
-//      }
-//     for(let value of str2){
-//         frequencyCount2[value] = (frequencyCount2[value] || 0) + 1
-//      }
-//     for(let key in frequencyCount1){
+    let obj1 = {}
+    let obj2 = {}
+
+    if(str1.length !== str2.length){
+        return "they are not anagram";
+    }
+
+    for(let i in str1){
+        obj1[str1[i]] = (obj1[str1[i]] || 0) + 1
+     }
+    for(let i in str2){
+        obj2[str2[i]] = (obj2[str2[i]] || 0) + 1
+     }
+    for(let i in obj1){
       
-//          if(frequencyCount1[key] !== frequencyCount2[key]){
-//             return false
-//         }
-//  }
+         if(obj1[i] !== obj2[i]){
+            return false
+        }
+ }
 
-//      return true
-// }
+     return true
+}
 
-// console.log(isAnagram("heart","earth"))
+console.log(isAnagram("heart","earth"))

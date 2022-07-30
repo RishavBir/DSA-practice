@@ -24,3 +24,6 @@ function vowels(str) {
     return vowelsCount
 }
 console.log(vowels("Winter"))
+
+
+
