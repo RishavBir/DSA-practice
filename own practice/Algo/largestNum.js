@@ -2,7 +2,7 @@
 // Find the largest number from array
 
 function largestNum (arr){
-    let largest = 0
+    let largest = - Infinity
 
     for(let i=0; i < arr.length; i++){
         if(largest < arr[i]){
@@ -11,6 +11,9 @@ function largestNum (arr){
     }
     return largest
 }
+console.log(largestNum([-1,-2,-3,-9,-5]))
 console.log(largestNum([1,2,3,9,5]))
+
+
 
 

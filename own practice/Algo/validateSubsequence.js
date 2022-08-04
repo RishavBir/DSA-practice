@@ -24,6 +24,6 @@
     return i == subArr.length;
 
  }
- console.log(validSubSequence([1,2,3,4,5] ,[2,3]))
+ console.log(validSubSequence([1,2,3,4,5] ,[2,5]))
 
  

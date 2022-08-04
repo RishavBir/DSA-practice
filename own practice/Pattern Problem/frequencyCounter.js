@@ -31,7 +31,7 @@ console.log(same([1,2,2,3], [1,4,9,4]))
 
                                             // METHOD NUMBER 2
 
- 
+ /*
 function same (arr1,arr2){
     
     let obj1 = {}
@@ -58,8 +58,7 @@ function same (arr1,arr2){
 }
 
 console.log(same([1,2,5,4],[1,25,4,16]))
-
-
+*/
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -138,7 +137,7 @@ function uniqueElement (arr) {
         obj[arr[i]] = (obj[arr[i]] || 0) + 1
     }
     for(let i in obj) {
-        if (obj[i] === 1) {
+        if (obj[i] == 1) {
             result.push(i)
         }
     }
@@ -146,6 +145,7 @@ function uniqueElement (arr) {
 }
 console.log(uniqueElement([2,2,4,6,6,7,9,3,9,9]))   // [3,4,7]
 */
+
 
 //*********************************************************************************************************** */
 
@@ -169,4 +169,25 @@ function uniqueElement (arr) {
 console.log(uniqueElement([2,2,4,6,6,7,9,3,9,9]))   // 3 ... ie. 3,4,7
 */
 
+//*************************************************************************************************** */
 
+function maxOccurEle (arr) {
+    if(arr.length == 0){
+        return null
+    }
+    let obj = {}, maxCount = 1
+    
+    for(let i=0; i<arr.length; i++){
+        if(obj[arr[i]] == null){
+            obj[arr[i]] = 1
+        }else{
+            obj[arr[i]]++
+        }
+        if(obj[arr[i]] > maxCount){
+            arr[0] = arr[i]
+            maxCount = obj[arr[0]]
+        }
+    }
+    return arr[0]
+}
+console.log(maxOccurEle([2,2,4,6,6,7,9,3,9,9,9]))   // 9

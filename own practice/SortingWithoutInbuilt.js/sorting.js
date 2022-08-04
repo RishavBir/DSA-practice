@@ -100,3 +100,5 @@ console.log(sorting(arr))
 
 //   }
 //   console.log(Unique(array1))
+
+
