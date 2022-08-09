@@ -190,4 +190,8 @@ function maxOccurEle (arr) {
     }
     return arr[0]
 }
-console.log(maxOccurEle([2,2,4,6,6,7,9,3,9,9,9]))   // 9
+console.log(maxOccurEle([2,2,4,6,6,7,9,3,9,9,9]))   // 9  
+
+
+
+

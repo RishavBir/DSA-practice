@@ -44,7 +44,7 @@ Given an integer array nums,move all 0's to the end of it
  EXAMPLE .....  [0,2,3,0,5,6,12] >>>>>> [2,3,5,6,12,0,0]
 */
 
-/*
+
 function moveZeroes (nums) {
     let left = 0
     let right = 1
@@ -71,7 +71,7 @@ function moveZeroes (nums) {
 }
 
 console.log(moveZeroes([3,0,4,6,7,0,1,5]))    // [3,4,6,7,1,5,0,0]
-*/
+
 
 
 
@@ -114,25 +114,8 @@ console.log(squares([-4,-1,0,3,10]))
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
-/*
- count unique value by using two pointer method
 
- ex ==== [1,2,2,3,3,3,4,5,6,7,7]
-*/
-
-
-function uniqueVal (arr){
-    var i = 0
-    for(let j=1; j<arr.length; j++){
-        if(arr[i] !== arr[j]){
-            i++
-            arr[i] = arr[j]
-        }
-    }
-    return i+1
-}
-
-console.log(uniqueVal([1,2,2,3,3,3,4,5,6,7,7]))   // total 7 unique numbers
+ 
 
 
 

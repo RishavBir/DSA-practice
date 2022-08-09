@@ -1,5 +1,15 @@
 
 
+                                    // DEFINITION OF LINKEDLIST
+
+/*
+LinkedList is the dynamic data structure, as we can add or remove elements at ease, 
+and it can even grow as needed
+*/
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 //                                       >>>>>> FULL CODE <<<<<<
 
 // This include >>>>
